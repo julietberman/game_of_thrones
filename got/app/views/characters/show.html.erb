@@ -1,0 +1,6 @@
+<h1><%=@character.name%></h1>
+<img src="<%=@character.img_url%>"/>
+<h2>Age: <%=@character.age%></h2>
+<h2>Allegiance: <%=link_to @character.house.name,  @character.house%></h2>
+
+<%=link_to "Edit",  edit_character_path%>

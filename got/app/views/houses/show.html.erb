@@ -1,0 +1,12 @@
+<h1><%=@house.name%></h1>
+<img src="<%=@house.img_url%>">
+<h2>Region: <%=@house.region%></h2>
+<h2><i>Motto: "<%=@house.motto%>"</i></h2>
+<hr/>
+
+<%@characters.each do |character|%>
+<div class="container">
+<img src="<%=character.img_url%>"/>
+<p><%= link_to character.name, character_path(character)%></p>
+<%=link_to "Execute!", character_path(character), method: :delete%></div>
+<%end%>

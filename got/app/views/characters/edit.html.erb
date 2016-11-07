@@ -1,0 +1,16 @@
+<h1>Edit <%=@character.name%></h1>
+
+<%= form_for @character do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+<br><br>
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+<br><br>
+  <%= f.label :photo %>
+  <%= f.text_field :img_url %>
+<br><br>
+  <%= select_tag(:house_id, options_for_select(@houses, @character.house.id))%>
+<br><br>
+  <%= f.submit%>
+<% end %>
